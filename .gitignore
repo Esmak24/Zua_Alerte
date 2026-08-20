@@ -1,0 +1,30 @@
+# Secrets
+.env
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python / backend local
+backend/.venv/
+**/.venv/
+**/__pycache__/
+*.py[cod]
+backend/gadget.db
+*.db
+
+# Node / Expo
+**/node_modules/
+**/.expo/
+front/dist/
+front/web-build/
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# Logs / OS
+*.log
+.DS_Store
+Thumbs.db
+
+# Tooling local
+front/.claude/
