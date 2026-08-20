@@ -181,6 +181,26 @@ class EmergencyContact(SQLModel, table=True):
 
 
 # ==========================================
+# USER REFERENCES (personnes de confiance)
+# ==========================================
+
+class UserReference(SQLModel, table=True):
+    __tablename__ = "user_references"
+
+    id: Optional[int] = Field(default=None, primary_key=True)
+
+    user_id: int = Field(index=True)
+
+    reference_user_id: int = Field(index=True)
+
+    is_active: bool = Field(default=True)
+
+    created_at: datetime = Field(
+        default_factory=lambda: datetime.now(timezone.utc)
+    )
+
+
+# ==========================================
 # NOTIFICATIONS
 # ==========================================
 
